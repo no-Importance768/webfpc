@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A small first website built with HTML, CSS, and JavaScript.">
+  <title>My First Website</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="First site home"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> first<span class="brand-light">site</span><span class="brand-dot">.</span></a>
+      <span class="project-label"><span class="status-dot" aria-hidden="true"></span> A little practice project</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heading">
+        <div class="hero-copy">
+          <p class="eyebrow">HELLO, WORLD <span class="arrow" aria-hidden="true"></span></p>
+          <h1 id="heading" aria-live="polite">My First Website</h1>
+          <p class="intro">Every great idea starts somewhere.<br>Here's to building something from scratch.</p>
+          <button id="click-button" type="button">Click Me <span class="arrow" aria-hidden="true"></span></button>
+          <p id="button-hint" class="button-hint">Go on, see what happens.</p>
+        </div>
+
+        <div class="animation-scene" aria-hidden="true">
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <span class="spark spark-one">+</span>
+          <span class="spark spark-two">+</span>
+          <div class="floating-circle"><span class="circle-symbol">*</span></div>
+          <div class="circle-shadow"></div>
+          <span class="animation-label"><span class="status-dot"></span> A little motion. A lot of possibility.</span>
+        </div>
+      </section>
+
+      <div class="build-details" aria-label="Built with HTML, CSS, and JavaScript">
+        <span class="details-label">SMALL START. SOLID FOUNDATIONS.</span>
+        <div class="technologies"><span><b aria-hidden="true">01</b> HTML</span><span><b aria-hidden="true">02</b> CSS</span><span><b aria-hidden="true">03</b> JavaScript</span></div>
+      </div>
+    </main>
+
+    <footer><span>Made with curiosity <span class="footer-star" aria-hidden="true">✳</span></span><span>Version 1.0 <span aria-hidden="true">/</span> The beginning</span></footer>
+  </div>
+</body>
+</html>

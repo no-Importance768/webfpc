@@ -1,0 +1,88 @@
+:root {
+  color-scheme: dark;
+  --background: #101f35;
+  --text: #f6f7f2;
+  --muted: #a2aec0;
+  --accent: #d7f875;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--background); color: var(--text); }
+.page { width: min(1160px, calc(100% - 96px)); margin: 0 auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; padding: 36px 0; }
+.brand { display: inline-flex; align-items: center; color: var(--text); font-size: 25px; font-weight: 700; text-decoration: none; letter-spacing: -1px; }
+.brand-icon { margin-right: 12px; color: var(--accent); font-family: monospace; font-size: 24px; letter-spacing: -4px; padding-right: 4px; }
+.brand-light { font-weight: 400; }
+.brand-dot { color: var(--accent); }
+.project-label { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
+.status-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; min-height: 620px; gap: 30px; padding: 55px 0 65px; }
+.eyebrow { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; margin: 0 0 25px; }
+.eyebrow span { margin-left: 12px; font-size: 17px; }
+h1 { max-width: 600px; margin: 0; font-size: clamp(56px, 6.6vw, 88px); font-weight: 700; line-height: 1.04; letter-spacing: -4.5px; text-wrap: balance; }
+.intro { margin: 26px 0 32px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+button { display: inline-flex; align-items: center; gap: 48px; min-height: 54px; padding: 0 24px; border: 0; border-radius: 7px; background: var(--accent); color: #142130; font: 700 14px Arial, sans-serif; cursor: pointer; transition: background 180ms, transform 180ms; }
+button span { font-size: 21px; font-weight: 400; }
+button:hover { background: #e5ffa1; transform: translateY(-2px); }
+button:active { transform: translateY(0); }
+button:focus-visible, .brand:focus-visible { outline: 3px solid var(--text); outline-offset: 6px; }
+.button-hint { min-height: 18px; margin: 14px 0 0; color: var(--muted); font-size: 11px; }
+.animation-scene { height: 440px; position: relative; display: grid; place-items: center; }
+.orbit { position: absolute; border: 1px solid #304058; border-radius: 50%; }
+.orbit-outer { width: 380px; height: 380px; }
+.orbit-inner { width: 300px; height: 300px; border-style: dashed; opacity: .65; }
+.floating-circle { display: grid; place-items: center; z-index: 1; width: 226px; height: 226px; border-radius: 50%; background: var(--accent); box-shadow: inset -16px -18px 35px #9ac94c55, 0 0 70px #d7f87509; animation: float 4s ease-in-out infinite; }
+.circle-symbol { color: #182d36; font-family: Georgia, serif; font-size: 180px; line-height: 1; transform: translateY(28px); }
+.circle-shadow { position: absolute; width: 142px; height: 17px; top: 355px; border-radius: 50%; background: #050e1d; filter: blur(7px); animation: shadow 4s ease-in-out infinite; }
+.spark { position: absolute; color: var(--accent); font-size: 24px; font-weight: 300; }
+.spark-one { top: 74px; right: 60px; }
+.spark-two { bottom: 94px; left: 42px; font-size: 17px; color: #8b9aaf; }
+.animation-label { position: absolute; bottom: -3px; display: flex; align-items: center; gap: 9px; color: var(--muted); font: 10px monospace; }
+.animation-label .status-dot { width: 4px; height: 4px; }
+.build-details { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid #304058; border-bottom: 1px solid #304058; padding: 28px 0; }
+.details-label { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: 1.8px; }
+.technologies { display: flex; gap: 42px; font-size: 12px; }
+.technologies span { white-space: nowrap; }
+.technologies b { color: #8290a5; font: 10px monospace; margin-right: 10px; }
+footer { display: flex; justify-content: space-between; gap: 20px; padding: 26px 0 30px; color: var(--muted); font-size: 10px; }
+.footer-star { margin-left: 5px; color: var(--accent); }
+footer > span:last-child { color: #8492a8; }
+footer > span:last-child span { padding: 0 9px; color: #4d607a; }
+@keyframes float { 0%, 100% { transform: translateY(12px); } 50% { transform: translateY(-18px); } }
+@keyframes shadow { 0%, 100% { transform: scaleX(1); opacity: .65; } 50% { transform: scaleX(.7); opacity: .3; } }
+@media (min-width: 1450px) { .hero { min-height: 680px; } }
+@media (max-width: 900px) {
+  .page { width: calc(100% - 56px); }
+  .hero { gap: 0; }
+  h1 { font-size: 62px; letter-spacing: -3px; }
+  .orbit-outer { width: 290px; height: 290px; }
+  .orbit-inner { width: 230px; height: 230px; }
+  .floating-circle { width: 180px; height: 180px; }
+  .circle-symbol { font-size: 145px; transform: translateY(23px); }
+  .spark-one { right: 10px; }
+  .technologies { gap: 22px; }
+}
+@media (max-width: 600px) {
+  .page { width: calc(100% - 40px); }
+  .site-header { padding: 26px 0; }
+  .brand { font-size: 23px; }
+  .project-label { max-width: 115px; font-size: 10px; line-height: 1.5; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 55px 0 40px; }
+  h1 { max-width: 390px; font-size: clamp(48px, 13vw, 70px); letter-spacing: -2.5px; }
+  .intro { font-size: 14px; margin: 22px 0 26px; }
+  .animation-scene { height: 350px; margin-top: 20px; }
+  .circle-shadow { top: 280px; }
+  .spark-one { top: 55px; right: 30px; }
+  .spark-two { left: 26px; bottom: 73px; }
+  .build-details { align-items: flex-start; flex-direction: column; gap: 22px; padding: 25px 0; }
+  .technologies { width: 100%; justify-content: space-between; gap: 12px; }
+  footer { font-size: 9px; gap: 10px; }
+  footer > span:last-child span { padding: 0 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+.arrow { display: inline-block; width: 10px; height: 10px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; position: relative; }
+.arrow::after { content: ""; position: absolute; width: 13px; height: 1.5px; background: currentColor; right: -2px; top: 3px; transform: rotate(-45deg); }
